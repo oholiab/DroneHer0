@@ -56,12 +56,14 @@ function blackout() {
 }
 function update() {
 
-	//example pixel and canvas scaling
-	$scale = Math.floor($c.height/50);
-	$c.height++;
+	scaleCanvas();
 	if($glyphs[0].x > 2){
 		$glyphs[0].x--;
 	}
+}
+function scaleCanvas() {
+	$scale = Math.floor($c.height/50);
+	$c.height = window.innerHeight - 20;
 }
 
 function render() {
